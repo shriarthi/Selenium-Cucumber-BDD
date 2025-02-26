@@ -7,7 +7,8 @@ import io.cucumber.testng.CucumberOptions;
 		"src/test/resources/Features/2_products.feature",
 		"src/test/resources/Features/3_checkout.feature",
 		"src/test/resources/Features/4_informationpage.feature",
-		"src/test/resources/Features/5_orderpage.feature"}, 
+		"src/test/resources/Features/5_orderpage.feature",
+		"src/test/resources/Features/6_orderhistory.feature"}, 
 
 glue = { "com.qa.saucedemo.stepdefinitions" },
 		plugin = { "pretty", "html:target/cucumber-reports.html"
