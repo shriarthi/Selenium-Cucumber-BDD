@@ -5,5 +5,5 @@ test-output/
 .idea/
 *.iml
 allure-results/
-allure-report/
+screenshots/
 
