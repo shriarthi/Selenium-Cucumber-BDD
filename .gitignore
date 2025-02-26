@@ -4,3 +4,6 @@ test-output/
 *.class
 .idea/
 *.iml
+allure-results/
+allure-report/
+
