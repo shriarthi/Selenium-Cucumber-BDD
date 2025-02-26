@@ -28,9 +28,9 @@ public class DriverFactory {
         return prop;
     }
 
-    /**
-     * Initialize WebDriver only if not already set.
-     */
+    
+     // Initialize WebDriver only if not already set.
+     
     public void init_driver(Properties prop) {
         if (tlDriver.get() == null) {
             System.out.println("Initializing WebDriver...");
@@ -38,13 +38,11 @@ public class DriverFactory {
             
             switch (browserName.toLowerCase()) {
                 case "chrome":
-                    //WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--remote-allow-origins=*");
                     tlDriver.set(new ChromeDriver(options));
                     break;
                 case "firefox":
-//                    WebDriverManager.firefoxdriver().setup();
                     tlDriver.set(new FirefoxDriver());
                     break;
                 case "safari":
@@ -65,16 +63,16 @@ public class DriverFactory {
         }
     }
 
-    /**
-     * Get the WebDriver instance.
-     */
+    
+     // Get the WebDriver instance.
+     
     public static WebDriver getDriver() {
         return tlDriver.get();
     }
 
-    /**
-     * Quit WebDriver only once after all tests.
-     */
+    
+     // Quit WebDriver only once after all tests.
+     
     public static void quitDriver() {
         if (tlDriver.get() != null) {
             tlDriver.get().quit();
