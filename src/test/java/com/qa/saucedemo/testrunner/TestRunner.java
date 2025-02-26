@@ -11,8 +11,12 @@ import io.cucumber.testng.CucumberOptions;
 		"src/test/resources/Features/6_orderhistory.feature"}, 
 
 glue = { "com.qa.saucedemo.stepdefinitions" },
-		plugin = { "pretty", "html:target/cucumber-reports.html"
-		}, monochrome = true)
+plugin = {
+        "pretty", 
+        "html:target/cucumber-reports.html",
+        "json:target/cucumber-reports.json",
+	"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" 
+    }, monochrome = true)
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 }

@@ -14,12 +14,12 @@ import org.openqa.selenium.WebElement;
 public class ElementUtil {
 
 	private WebDriver driver;
-	
+
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
-		
+
 	}
-	
+
 	public By getBy(String locatorType, String locatorValue) {
 		By locator = null;
 
@@ -51,16 +51,16 @@ public class ElementUtil {
 		return locator;
 
 	}
-	
+
 	public WebElement getElement(By locator) {
 		WebElement element = driver.findElement(locator);
 		return element;
 	}
-	
+
 	public List<WebElement> getElements(By locator) {
 		return driver.findElements(locator);
 	}
-	
+
 	public void doClear(By locator) {
 		getElement(locator).clear();
 	}
@@ -69,16 +69,15 @@ public class ElementUtil {
 		doClear(locator);
 		getElement(locator).sendKeys(value);
 	}
-	
-	
+
 	public String doGetText(By locator) {
 		return getElement(locator).getText();
 	}
-	
+
 	public void doClick(By locator) {
 		getElement(locator).click();
 	}
-	
+
 	public String screenShot(WebDriver driver) {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";

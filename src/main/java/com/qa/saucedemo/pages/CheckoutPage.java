@@ -7,18 +7,16 @@ import com.qa.saucedemo.utils.ElementUtil;
 
 public class CheckoutPage {
 
-	// 1. declare private driver
 	private WebDriver driver;
 	private ElementUtil eleUtil;
-			
-			//2. Page Constructor 
+
 	public CheckoutPage(WebDriver driver) {
-	this.driver = driver;
-	eleUtil = new ElementUtil(driver);
+		this.driver = driver;
+		eleUtil = new ElementUtil(driver);
 	}
-			
-	private By checkoutBtn = By.id("checkout");	
-	
+
+	private By checkoutBtn = By.id("checkout");
+
 	public InformationPage clickOnChekout() {
 		eleUtil.doClick(checkoutBtn);
 		return new InformationPage(driver);
