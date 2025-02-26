@@ -19,5 +19,8 @@ public class CheckoutPage {
 			
 	private By checkoutBtn = By.id("checkout");	
 	
-	
+	public InformationPage clickOnChekout() {
+		eleUtil.doClick(checkoutBtn);
+		return new InformationPage(driver);
+	}
 }

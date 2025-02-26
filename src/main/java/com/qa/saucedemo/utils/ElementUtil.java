@@ -70,6 +70,11 @@ public class ElementUtil {
 		getElement(locator).sendKeys(value);
 	}
 	
+	
+	public String doGetText(By locator) {
+		return getElement(locator).getText();
+	}
+	
 	public void doClick(By locator) {
 		getElement(locator).click();
 	}
